@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image\png" href="iconn.png">
+  <link rel="stylesheet" href="/bootstrap/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Front office</title>
+</head>
+
+    
+  <style>
+    @keyframes colorChange {
+      0% { color: brown; } 
+      25% { color: black; } 
+      50% { color: white; } 
+      75% { color: beige; } 
+      100% { color: brown; } 
+    }
+    h1 {
+      animation: colorChange 5s infinite; 
+    }
+
+    img:hover{
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform: scale(1.1); 
+      
+    }
+    .a{
+      color: red; 
+          text-decoration: none; 
+          transition: color 0.3s ease;
+    }
+
+    @keyframes fadeInSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px); 
+      }
+      100% {
+        opacity: 2;
+        transform: translateY(); 
+      }
+    }
+    about{
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      margin: 20px;
+      animation: fadeInSlideUp 2s ease-out; 
+    }
+    @keyframes slideBackground {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 0%; }
+  100% { background-position: 0% 0%; }
+}
+
+body {
+  text-align: center;
+  background-image: url('/Frontoffice/backgrounf front.png'); 
+  background-size: 50% 50%;
+  background-attachment: fixed;
+  animation: slideBackground 20s ease infinite;
+  margin: 0;
+}
+    </style>
+    <a href="https://esprit.tn/" target="_blank">
+  <img  src="esprit.png" alt="logo esprit" width="150">
+</a>
+    <div>
+      <a href="/Backoffice/addTravelOffer.html" target="_blank" style="color:white" type="button" class="btn btn-primary">Travel Offers</a>
+      <button type="button" class="btn btn-warning" id="liveToastBtn" style="color:white">About</button>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive"  aria-atomic="true" style="background-color: orange;">
+    <div class="toast-header">
+      <img src="about.png" class="rounded me-2" alt="about">
+      <strong class="me-auto" style="color: blue;">About</strong>
+      <small>1s ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      A travel agency specializing in customized holidays wants 
+      to modernize its online booking system. Currently,customers have
+       to contact the agency by phone or e-mail to book their trips, resulting in delays
+        and inefficiencies. The agency needs an online solution that will enable customers to 
+        browse offers, personalize their trips and book autonomously.
+    </div>
+  </div>
+</div>
+      <a type="button" class="btn btn-primary" href="mailto:contact@esprit.tn" style="color:white">Contact</a>
+      <a type="button" class="btn btn-warning" href="#" style="color:white">Dashboard</a>
+  </div>
+    <div>
+    <h1>TRAVEL BOOKING</h1>
+    <p>Family Trips - Couples'Trips - Adventure and Sports Trips</p>
+  </div>
+  <div>
+    <h3>TRAVEL OFFERS</h3>
+    <a href="#" data-bs-toggle="modal" data-bs-target="#circusModal">
+      <img src="circus.png" width="400" style="margin-right: 30px; border-radius: 10px;">
+    </a>
+    <a href="#" data-bs-toggle="modal" data-bs-target="#cabinModal">
+      <img src="cabin.png" width="400" style="border-radius: 10px;">
+    </a>
+    <a href="#" data-bs-toggle="modal" data-bs-target="#submarineModal">
+      <img src="submarine.png" width="400" style="margin-left: 30px; border-radius: 10px;">
+    </a>
+  </div>
+
+  
+  <div class="modal fade" id="circusModal" tabindex="-1" aria-labelledby="circusModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="background-color: orange;">
+      <div class="modal-content" >
+        <div class="modal-header" style="background-color: orange;" >
+          <h5 class="modal-title" id="circusModalLabel" style="background-color: orange;">Circus Adventure</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: blue;"></button>
+        </div>
+        <div class="modal-body">
+          Experience the excitement of the circus with thrilling performances and adventurous stunts.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="modal fade" id="cabinModal" tabindex="-1" aria-labelledby="cabinModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="background-color: orange;">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: orange;">
+          <h5 class="modal-title" id="cabinModalLabel" style="background-color: orange;">Mountain Cabin Escape</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: blue;"></button>
+        </div>
+        <div class="modal-body">
+          Enjoy a serene retreat in a mountain cabin with breathtaking views and tranquil surroundings.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="modal fade" id="submarineModal" tabindex="-1" aria-labelledby="submarineModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="background-color: orange;">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: orange;">
+          <h5 class="modal-title" id="submarineModalLabel" style="background-color: orange;">Underwater Submarine Adventure</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: blue;"></button>
+        </div>
+        <div class="modal-body">
+          Dive deep into the ocean with our submarine adventure and explore marine life like never before.
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+    <hr>
+    <footer align="left">
+      <a href="https://www.google.com/maps/search/1,2+rue+Andr%C3%A9+Ampere+-2083+Technological+Pole+-+El+Ghazala/@36.8610251,10.1803342,15z?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="text-decoration: none; color: inherit;">
+        <address align="center">
+          1,2 rue André Ampere -2083
+          <br>
+          Technological Pole - El Ghazala
+        </address>
+      </a>
+      <br>
+      <p align="center">Copyright © Your Website 2024 </p>
+    </footer>
+  </div>
+  
+  <script src="/bootstrap/index.js"></script>
+  <script>
+    const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+
+if (toastTrigger) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+  toastTrigger.addEventListener('click', () => {
+    toastBootstrap.show()
+  })
+}
+  </script>
+  
+</body>
+</html>
